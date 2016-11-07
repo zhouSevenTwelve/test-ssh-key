@@ -1,0 +1,9 @@
+Step1 安装git
+Git是用于Linux内核开发的版本控制工具。与CVS、Subversion一类的集中式版本控制工具不同，它采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。Git的速度很快，这对于诸如Linux内核这样的大项目来说自然很重要。Git最为出色的是它的合并追踪（merge tracing）能力。
+实际上内核开发团队决定开始开发和使用Git来作为内核开发的版本控制系统的时候，世界上开源社区的反对声音不少，最大的理由是Git太艰涩难懂，从Git的内部工作机制来说，的确是这样。但是随着开发的深入，Git的正常使用都由一些友善的命令稿来执行，使Git变得非常好用。现在，越来越多的著名项目采用Git来管理项目开发，例如：wine、U-boot等。
+作为开源自由原教旨主义项目，Git没有对版本库的浏览和修改做任何的权限限制，通过其他工具也可以达到有限的权限控制，比如：gitosis、CodeBeamer MR。原本Git的使用范围只适用于Linux/Unix平台，但在Windows平台下的使用也日渐成熟，这主要归功于Cygwin、msysgit环境，以及TortoiseGit这样易用的GUI工具。Git的源代码中也已经加入了对Cygwin与MinGW编译环境的支持且逐渐完善，为Windows用户带来福音。 
+sudo apt-get install git-core git-gui git-doc 
+Step2 创建新的ssh key（秘钥）
+ssh-keygen -t rsa -C "your_email@youremail.com" 
+然后提示输入 passphrase（密码），输入两次（可以不输直接两次Enter）  不输入密码为系统默认默认
+然后会在 .ssh 目录生产两个文件： id_rsa   和    id_rsa.pub  

@@ -2,3 +2,8 @@ this is my first push
 出现X84不能匹配X64
 因为我的mysql是64位的，系统也是64位的，所以在创建工程师不能是WIN32的，要在解决方案的属性->配置属性->配置->平台 中将WIN32改为X64
 还要在项目属性->链接器->高级->目标计算机 改为MachineX64
+
+--远程连接mysql
+正常情况下，mysql占用的3306端口只是在IP 127.0.0.1上监听，拒绝了其他IP的访问(通过netstat可以查看到。（取消本地监听需要修改 my.cnf 文件：)：
+　　sudo vi /etc/mysql/my.cnf
+　　bind-address = 127.0.0.1 //找到此内容并且注释

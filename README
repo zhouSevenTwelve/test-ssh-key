@@ -10,4 +10,5 @@ this is my first push
  msyql默认的bind-address是127.0.0.1，这样的话就算你创建的用户有可以remote访问的话 也不能通过-h 来访问，mysql只接受localhost，错误提示为：ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)
 
 bind-address后面增加远程访问IP地址或者禁掉这句话就可以让远程机登陆访问了。
+这是新添加的一行。
 
